@@ -4,17 +4,16 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Products from './Components/Products'
 import Modal from './Components/Modal'
-
+import useToggle from "./Hooks/useToggle";
 function App() {
-  const [count, setCount] = useState(0)
-
+const { on, toggler } = useToggle();
   return (
     <>
     <Navbar/>
     <div className='flex justify-center'>
-    <Products/>
+    <Products toggler={toggler}/>
     </div>
-    <Modal/>
+    {on && <Modal toggler={toggler} /> }
     </>
   )
 }

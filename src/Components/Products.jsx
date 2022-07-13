@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Products = () => {
+const Products = (props) => {
   return (
     
-    <div className='max-w-xs rounded overflow-hidden shadow-lg my-4'>
+    <div 
+    onClick={()=> props.toggler()}
+    className='max-w-xs rounded overflow-hidden shadow-lg my-4'>
           <img
         className="w-full"
         src="https://cdn.shopify.com/s/files/1/1626/8507/products/classic-dad-hat-pink-front-620a928e93e58_345x550.jpg?v=1644860054"
